@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Post a Job</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2>Post a New Job Opening</h2>
+    <form th:action="@{/save-job}" th:object="${job}" method="post" class="mt-4">
+        <div class="mb-3">
+            <label class="form-label">Job Title</label>
+            <input type="text" th:field="*{title}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Company Name</label>
+            <input type="text" th:field="*{companyName}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Location</label>
+            <input type="text" th:field="*{location}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Salary</label>
+            <input type="number" step="0.01" th:field="*{salary}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea th:field="*{description}" class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Save Job</button>
+        <a href="/" class="btn btn-secondary">Cancel</a>
+    </form>
+</body>
+</html>
