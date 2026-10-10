@@ -1,4 +1,4 @@
-# 💼 Job Application Portal
+# 💼 Jobb Application Portal
 
 A web-based **Job Application Portal** designed to simplify the job search and recruitment process by providing a platform for candidates to explore career opportunities and manage their job applications.
 
